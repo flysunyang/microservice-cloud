@@ -1,0 +1,8 @@
+#配置Eureka集群的映射关系
+127.0.0.1       eureka7001.com
+127.0.0.1       eureka7002.com
+127.0.0.1       eureka7003.com
+
+127.0.0.1       myzuul.com
+127.0.0.1       config-3344.com
+127.0.0.1       client-config.com
