@@ -16,6 +16,7 @@
         <module>microservice-eureka-7003</module>
         <module>microservice-prodiver-8002</module>
         <module>microservice-prodiver-8003</module>
+        <module>microservice-feign-consumer-80</module>
     </modules>
     <packaging>pom</packaging>
 
