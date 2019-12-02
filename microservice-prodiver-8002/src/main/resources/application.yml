@@ -1,0 +1,35 @@
+server:
+  port: 8002
+
+spring:
+  application:
+    name: dept-provider #Eureka服务中的服务名的ApplicationName，服务端集群微服务名必须一致
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/springcloud02?useUnicode=true&characterEncoding=utf-8&useSSL=true
+    username: root
+    password: 123456
+
+mybatis:
+  mapper-locations:
+  - classpath:mybatis/mapper/**/*.xml
+  type-aliases-package: com.sun.cloud.pojo
+  configuration:
+    map-underscore-to-camel-case: true
+
+eureka:
+  instance:
+    prefer-ip-address: true # 显示IP地址
+    instance-id: provider-8002 # 配置Eureka实例名
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
+#    register-with-eureka: true # 是否向Eureka服务中注册
+#    fetch-registry: true #是否检索Eureka服务
+
+#/info路径请求的展示的数据
+info:
+  app.name: atguigu-microservicecloud
+  company.name: www.atguigu.com
+  build.artifactId: @project.artifactId@
+  build.version: @project.version@
