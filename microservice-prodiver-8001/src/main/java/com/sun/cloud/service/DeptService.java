@@ -16,4 +16,11 @@ public interface DeptService {
      * @return
      */
     List<Dept> list();
+
+    /**
+     * 根据ID查找Dept
+     * @param id
+     * @return
+     */
+    Dept getById(Integer id);
 }

@@ -17,6 +17,7 @@
         <module>microservice-prodiver-8002</module>
         <module>microservice-prodiver-8003</module>
         <module>microservice-feign-consumer-80</module>
+        <module>microservice-hystrix-dashboard-9001</module>
     </modules>
     <packaging>pom</packaging>
 

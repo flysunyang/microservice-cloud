@@ -5,4 +5,11 @@
     <select id="findAll" resultType="dept">
         select id, dept_name, db_source from t_dept
     </select>
+
+    <select id="selectById" resultType="dept" parameterType="int">
+        select id, dept_name, db_source from t_dept
+        <where>
+            id = #{id}
+        </where>
+    </select>
 </mapper>

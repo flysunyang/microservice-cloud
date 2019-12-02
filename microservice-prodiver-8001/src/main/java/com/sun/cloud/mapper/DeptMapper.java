@@ -18,4 +18,11 @@ public interface DeptMapper {
      * @return
      */
     List<Dept> findAll();
+
+    /**
+     * 根据ID查找Dept
+     * @param id
+     * @return
+     */
+    Dept selectById(Integer id);
 }
