@@ -1,0 +1,23 @@
+server:
+  port: 9527
+
+eureka:
+  instance:
+    instance-id: zuul-gateway
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka,http://eureka7003.com:7003/eureka
+
+spring:
+  application:
+    name: zuul-app
+
+# zuul配置规则
+zuul:
+  routes:
+    mydept:
+      serviceId: DEPT-PROVIDER #路由的微服务名
+      path: /mydept/** #访问的路径，表示该访问路径下，根据服务名：dept-provider查找
+    ignored-services: '*' # 除/mydept/路径之外，所有服务都被忽略
+  prefix: /myzuul #设置前缀
